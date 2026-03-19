@@ -84,6 +84,7 @@ scene.set_camera(
     focal_point=(-0.29, -19.66, 7.92),
     view_up=(0.06, 0.00, 1.00)
 )
+scene.camera_info()
 window.snapshot(
     scene,
     fname=out_dir / "bundles2.png",
@@ -94,6 +95,7 @@ scene.set_camera(
     focal_point=(-0.29, -19.66, 7.92),
     view_up=(0.06, -0.99, 0.10)
 )
+scene.camera_info()
 window.snapshot(
     scene,
     fname=out_dir / "bundles3.png",
