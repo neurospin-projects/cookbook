@@ -41,6 +41,7 @@ dependencies = [
     "statannotations",
     "statsmodels",
     "cryptography",
+    "pillow",
 ]
 dynamic = ["version"]
 

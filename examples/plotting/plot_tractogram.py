@@ -74,9 +74,9 @@ scene.set_camera(
 )
 # window.show(scene, size=(600, 600), reset_camera=True)
 scene.camera_info()
-window.record(
-    scene=scene,
-    out_path=out_dir / "bundles1.png",
+window.snapshot(
+    scene,
+    fname=out_dir / "bundles1.png",
     size=(600, 600),
 )
 scene.set_camera(
@@ -84,9 +84,9 @@ scene.set_camera(
     focal_point=(-0.29, -19.66, 7.92),
     view_up=(0.06, 0.00, 1.00)
 )
-window.record(
-    scene=scene,
-    out_path=out_dir / "bundles2.png",
+window.snapshot(
+    scene,
+    fname=out_dir / "bundles2.png",
     size=(600, 600),
 )
 scene.set_camera(
@@ -94,9 +94,9 @@ scene.set_camera(
     focal_point=(-0.29, -19.66, 7.92),
     view_up=(0.06, -0.99, 0.10)
 )
-window.record(
-    scene=scene,
-    out_path=out_dir / "bundles3.png",
+window.snapshot(
+    scene,
+    fname=out_dir / "bundles3.png",
     size=(600, 600),
 )
 
