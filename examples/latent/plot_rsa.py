@@ -12,27 +12,27 @@ Import
 """
 
 import os
+import pathlib
+import zipfile
 from itertools import combinations
+
+import matplotlib.colors as mcolors
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import requests
-import zipfile
-from sklearn.decomposition import PCA
-from scipy.stats import kendalltau
-from scipy.spatial.distance import pdist
-from scipy.spatial.distance import squareform
-import matplotlib.pyplot as plt
-import matplotlib.colors as mcolors
 import seaborn as sns
-from scipy.stats import ttest_1samp
+from scipy.spatial.distance import pdist, squareform
+from scipy.stats import kendalltau, ttest_1samp
 from scipy.stats import ttest_ind as ttest
-
+from sklearn.decomposition import PCA
 
 # %%
 # Utils
 # -----
 #
 # Let's define some functions.
+
 
 def data2cmat(data):
     """ Compute pairwise (dis)similarity matrices.
@@ -243,10 +243,10 @@ def plot_bar(key, rsa, ax=None, figsize=(5, 2), dpi=300, fontsize=16,
                 tval, pval = ttest(data[name1], data[name2])
                 if pval > .001:
                     print(f"{key} {name1} >  {name2} | "
-                          f"t({n_samples-1}) = {tval:.2f} p = {pval:.2f}")
+                          f"t({n_samples - 1}) = {tval:.2f} p = {pval:.2f}")
                 else:
                     print(f"{key} {name1} >  {name2} | "
-                          f"t({n_samples-1}) = {tval:.2f} p < .001")
+                          f"t({n_samples - 1}) = {tval:.2f} p < .001")
                 pairwise_t[idx1, idx2] = tval
                 pairwise_p[idx1, idx2] = pval
                 _data.setdefault("pair", []).append(
@@ -287,6 +287,7 @@ def plot_bar(key, rsa, ax=None, figsize=(5, 2), dpi=300, fontsize=16,
 #
 # Let's define where are stored the data.
 
+
 url = (
     "https://zenodo.org/records/6304004/files/sccnlab/"
     "pub-CVAE-MRI-ASD-v1.0.0.zip?download=1"
@@ -297,8 +298,7 @@ if not os.path.isdir(data_dir):
     print("Downloading...")
     response = requests.get(url)
     response.raise_for_status()
-    with open(zip_file, "wb") as of:
-        of.write(response.content)
+    pathlib.Path(zip_file).write_bytes(response.content)
     print(f"Saved: {zip_file}")
     with zipfile.ZipFile(zip_file, "r") as of:
         of.extractall(data_dir)
@@ -398,7 +398,7 @@ data = {
     "CVAE_SL": cmat_cvae_background[:, patients_indices][..., patients_indices],
     "CVAE_BG": cmat_cvae_salient[:, patients_indices][..., patients_indices]
 }
-rsa_results, rsa_records = dict(),  dict()
+rsa_results, rsa_records = dict(), dict()
 for qname in clinical_scores + list(keys_pca.keys()):
     for key, smat in data.items():
         res = fit_rsa(smat, model_cmats[qname], idxs=model_idxs[qname])

@@ -11,16 +11,16 @@ medium and short templates.
 First we import modules and set global parameters (that can be changed).
 """
 
-import requests
-import nibabel
-import numpy as np
 from pathlib import Path
-from PIL import Image
-from tqdm import tqdm
+
 import matplotlib as mpl
 import matplotlib.pyplot as plt
+import nibabel
+import numpy as np
+import requests
 from dipy.viz import actor, window
-
+from PIL import Image
+from tqdm import tqdm
 
 # Public URL containing a tck file
 api_url = (

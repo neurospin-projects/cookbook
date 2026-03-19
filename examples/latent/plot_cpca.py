@@ -10,18 +10,18 @@ Import
 ------
 """
 
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from contrastive import CPCA
 import seaborn as sns
-import matplotlib.pyplot as plt
-
+from contrastive import CPCA
 
 # %%
 # Utils
 # -----
 #
 # Let's define some functions.
+
 
 def apply_cpca(X, Y, T, alpha=2, n_components=10):
     Xc = X - np.mean(X, axis=0)

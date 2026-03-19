@@ -12,14 +12,16 @@ The main entry point is `decompose_cifti()`, which returns:
 These functions rely on NiBabel's CIFTI-2 API.
 """
 
-import numpy as np
-import nibabel
-import requests
+import pathlib
 
+import nibabel
+import numpy as np
+import requests
 
 # -------------------------------------------------------------------------
 # Main decomposition function
 # -------------------------------------------------------------------------
+
 
 def decompose_cifti(cifti_file, raw=False):
     """
@@ -66,7 +68,6 @@ def decompose_cifti(cifti_file, raw=False):
         "Expected exactly one BrainModelAxis in CIFTI file."
     )
     brain_models = select_axes[0]
-
 
     vol = volume_from_cifti(data, brain_models, raw)
     left = surf_data_from_cifti(
@@ -185,8 +186,7 @@ cifti_path = "/tmp/sample.dtseries.nii"
 print("Downloading...")
 response = requests.get(url)
 response.raise_for_status()
-with open(cifti_path, "wb") as of:
-    of.write(response.content)
+pathlib.Path(cifti_path).write_bytes(response.content)
 print(f"Saved: {cifti_path}")
 
 # Load and decompose the CIFTI file

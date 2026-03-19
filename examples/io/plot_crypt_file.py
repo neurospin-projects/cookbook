@@ -13,14 +13,16 @@ as PBKDF2HMAC or scrypt for real‑world applications.
 
 import base64
 import hashlib
-import tempfile
 import os
-from cryptography.fernet import Fernet
+import pathlib
+import tempfile
 
+from cryptography.fernet import Fernet
 
 # -------------------------------------------------------------------------
 # Key generation
 # -------------------------------------------------------------------------
+
 
 def generate_key(password: str) -> bytes:
     """
@@ -79,13 +81,11 @@ def encrypt_file(file_path: str, key: bytes):
     """
     fernet = Fernet(key)
 
-    with open(file_path, "rb") as file:
-        original = file.read()
+    original = pathlib.Path(file_path).read_bytes()
 
     encrypted = fernet.encrypt(original)
 
-    with open(file_path, "wb") as encrypted_file:
-        encrypted_file.write(encrypted)
+    pathlib.Path(file_path).write_bytes(encrypted)
 
     return fernet
 
@@ -118,8 +118,7 @@ def decrypt_file(file_path: str, key: bytes):
       encrypted file unchanged.
     - The decrypted content overwrites the encrypted file.
     """
-    with open(file_path, "rb") as encrypted_file:
-        encrypted = encrypted_file.read()
+    encrypted = pathlib.Path(file_path).read_bytes()
 
     fernet = Fernet(key)
 
@@ -129,8 +128,7 @@ def decrypt_file(file_path: str, key: bytes):
         print("Error: invalid key. File was not decrypted.")
         return
 
-    with open(file_path, "wb") as decrypted_file:
-        decrypted_file.write(decrypted)
+    pathlib.Path(file_path).write_bytes(decrypted)
 
 
 # %%
@@ -156,8 +154,7 @@ decrypt_file(file_path, key)
 print("File decrypted.")
 
 # 5. Read back the content and verify equality
-with open(file_path, "rb") as f:
-    final_content = f.read()
+final_content = pathlib.Path(file_path).read_bytes()
 if final_content == original_content:
     print("Success: decrypted content matches the original.")
 else:

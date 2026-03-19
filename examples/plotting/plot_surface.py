@@ -7,18 +7,16 @@ Display a custom texture on the cortical surface.
 
 import os
 import string
+
+import matplotlib.pyplot as plt
 import nibabel
 import numpy as np
 import pandas as pd
-from tqdm import tqdm
-from nilearn import plotting
-from nilearn.datasets import (
-    fetch_atlas_surf_destrieux,
-    fetch_surf_fsaverage
-)
-from nilearn.surface import load_surf_mesh
-import matplotlib.pyplot as plt
 from matplotlib.gridspec import GridSpec
+from nilearn import plotting
+from nilearn.datasets import fetch_atlas_surf_destrieux, fetch_surf_fsaverage
+from nilearn.surface import load_surf_mesh
+from tqdm import tqdm
 
 
 def plot_surf(textures, titles, meshs, bg_maps, filename=None,
@@ -61,7 +59,7 @@ def plot_surf(textures, titles, meshs, bg_maps, filename=None,
     # Generate views
     nmodels = len(titles)
     if config == "fsaverageflat":
-        nview =  2
+        nview = 2
         hemis = [
             "right", "left"
         ]
@@ -214,4 +212,4 @@ plot_surf(
     config="fsaverageflat"
 )
 plotting.show()
-    
+
