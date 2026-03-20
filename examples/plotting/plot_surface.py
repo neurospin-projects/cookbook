@@ -219,5 +219,5 @@ plot_surf(
     bg_maps=(data["sulc_left"], data["sulc_right"]),
     config="fsaverageflat"
 )
-plotting.show()
+# plotting.show()
 

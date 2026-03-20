@@ -45,12 +45,12 @@ jobs:
       id: deploy-type
       run: |
         if ${{ github.ref == 'refs/heads/master' ||
-            github.ref == 'refs/heads/main' }}; then
+               github.ref == 'refs/heads/main' }}; then
             echo "DEPLOY_TYPE=stable" >> $GITHUB_OUTPUT
         elif ${{ github.ref == 'refs/heads/dev' }}; then
             echo "DEPLOY_TYPE=dev" >> $GITHUB_OUTPUT
         else
-          echo "DEPLOY_TYPE=pr" >> $GITHUB_OUTPUT
+            echo "DEPLOY_TYPE=pr" >> $GITHUB_OUTPUT
         fi
     - name: Checkout repository
       uses: actions/checkout@v5
