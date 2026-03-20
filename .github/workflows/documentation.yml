@@ -68,7 +68,13 @@ jobs:
     - name: Install apt packages
       uses: awalsh128/cache-apt-pkgs-action@latest
       with:
-        packages: dvipng texlive-latex-base texlive-latex-extra build-essential
+        packages: >
+          dvipng
+          texlive-base
+          texlive-latex-base
+          texlive-latex-recommended
+          texlive-latex-extra
+          texlive-fonts-recommended
         version: 1.0
     - name: Install documentation resources
       run: |
