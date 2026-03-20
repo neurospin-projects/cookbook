@@ -89,7 +89,7 @@ jobs:
         make html-strict
         cd $DIR
     - name: Upload documentation as an artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       env:
         DEPLOY_TYPE: ${{ steps.deploy-type.outputs.DEPLOY_TYPE }}
       with: 
