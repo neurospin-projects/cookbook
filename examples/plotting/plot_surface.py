@@ -112,12 +112,13 @@ def plot_surf(textures, titles, meshs, bg_maps, filename=None,
                                      projection="3d")
                 axs.append(ax)
             texture = data[hemis[idx_j]]
+            texture = np.abs(texture * 100).astype(int)
             vmin = min([0, min(texture)])
             vmax = max(texture)
             vertices, triangles = reference_surfs[hemis[idx_j]]
             plotting.plot_surf_roi(
                 (vertices + offsets[idx_j], triangles),
-                roi_map=np.abs(texture),
+                roi_map=texture,
                 hemi=hemis[idx_j], view=views[idx_j], darkness=.7,
                 cmap="gist_ncar", vmin=vmin, vmax=vmax, axes=ax,
                 bg_map=data_bg[hemis[idx_j]], alpha=0.95)
