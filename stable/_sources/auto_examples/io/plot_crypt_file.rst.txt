@@ -206,7 +206,7 @@ Example usage of the encryption functions
 
  .. code-block:: none
 
-    Temporary file created at: /tmp/tmpc8ax8pb_
+    Temporary file created at: /tmp/tmp24uf_f_2
     File encrypted.
     File decrypted.
     Success: decrypted content matches the original.
@@ -217,9 +217,9 @@ Example usage of the encryption functions
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.266 seconds)
+   **Total running time of the script:** (0 minutes 0.220 seconds)
 
-**Estimated memory usage:**  118 MB
+**Estimated memory usage:**  116 MB
 
 
 .. _sphx_glr_download_auto_examples_io_plot_crypt_file.py:

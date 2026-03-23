@@ -173,7 +173,7 @@ Let's perform cPCA with the original code.
 
 
 .. image-sg:: /auto_examples/latent/images/sphx_glr_plot_cpca_001.png
-   :alt: Alpha=0.0, Alpha=0.52, Alpha=2.73, Alpha=94.27
+   :alt: Alpha=0.0, Alpha=0.66, Alpha=2.73, Alpha=94.27
    :srcset: /auto_examples/latent/images/sphx_glr_plot_cpca_001.png
    :class: sphx-glr-single-img
 
@@ -183,7 +183,7 @@ Let's perform cPCA with the original code.
  .. code-block:: none
 
     Embeddings: [(400, 2), (400, 2), (400, 2), (400, 2)]
-    Best alphas: [ 0.    0.52  2.73 94.27]
+    Best alphas: [ 0.    0.66  2.73 94.27]
 
 
 
@@ -252,9 +252,9 @@ Let's do the same with our simplified code.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 1.696 seconds)
+   **Total running time of the script:** (0 minutes 1.588 seconds)
 
-**Estimated memory usage:**  122 MB
+**Estimated memory usage:**  121 MB
 
 
 .. _sphx_glr_download_auto_examples_latent_plot_cpca.py:

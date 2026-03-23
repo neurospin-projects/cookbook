@@ -551,7 +551,7 @@ print(coef_cca)
 
 # %%
 # General study
-# =============
+# -------------
 
 # dimensions of the simulated data
 m = 13000  # sample size

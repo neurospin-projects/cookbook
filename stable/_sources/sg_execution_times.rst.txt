@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**04:27.589** total execution time for 6 files **from all galleries**:
+**04:39.951** total execution time for 6 files **from all galleries**:
 
 .. container::
 
@@ -33,20 +33,20 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_auto_examples_genomic_plot_mostest.py` (``../examples/genomic/plot_mostest.py``)
-     - 02:09.382
-     - 320.2
+     - 02:23.039
+     - 312.5
    * - :ref:`sphx_glr_auto_examples_latent_plot_rsa.py` (``../examples/latent/plot_rsa.py``)
-     - 01:45.794
-     - 5217.3
+     - 01:45.981
+     - 5213.2
    * - :ref:`sphx_glr_auto_examples_plotting_plot_surface.py` (``../examples/plotting/plot_surface.py``)
-     - 00:29.658
-     - 401.2
+     - 00:28.450
+     - 399.0
    * - :ref:`sphx_glr_auto_examples_latent_plot_cpca.py` (``../examples/latent/plot_cpca.py``)
-     - 00:01.696
-     - 121.6
+     - 00:01.588
+     - 121.4
    * - :ref:`sphx_glr_auto_examples_io_plot_cifti.py` (``../examples/io/plot_cifti.py``)
-     - 00:00.793
-     - 129.6
+     - 00:00.673
+     - 126.6
    * - :ref:`sphx_glr_auto_examples_io_plot_crypt_file.py` (``../examples/io/plot_crypt_file.py``)
-     - 00:00.266
-     - 118.0
+     - 00:00.220
+     - 116.0

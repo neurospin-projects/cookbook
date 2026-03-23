@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**02:09.382** total execution time for 1 file **from auto_examples/genomic**:
+**02:23.039** total execution time for 1 file **from auto_examples/genomic**:
 
 .. container::
 
@@ -33,5 +33,5 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_auto_examples_genomic_plot_mostest.py` (``plot_mostest.py``)
-     - 02:09.382
-     - 320.2
+     - 02:23.039
+     - 312.5
