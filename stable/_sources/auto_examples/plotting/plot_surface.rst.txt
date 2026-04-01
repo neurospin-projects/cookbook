@@ -298,8 +298,8 @@ Note that the average function selects the 10 first regions:
 
  .. code-block:: none
 
-    curv:   0%|          | 0/8 [00:00<?, ?it/s]    curv:  25%|██▌       | 2/8 [00:00<00:00, 16.36it/s]    curv:  62%|██████▎   | 5/8 [00:00<00:00, 20.90it/s]    curv: 100%|██████████| 8/8 [00:00<00:00, 21.85it/s]    curv: 100%|██████████| 8/8 [00:00<00:00, 21.14it/s]
-    averaged curv:   0%|          | 0/8 [00:00<?, ?it/s]    averaged curv:  38%|███▊      | 3/8 [00:00<00:00, 22.64it/s]    averaged curv:  75%|███████▌  | 6/8 [00:00<00:00, 21.84it/s]    averaged curv: 100%|██████████| 8/8 [00:00<00:00, 22.70it/s]
+    curv:   0%|          | 0/8 [00:00<?, ?it/s]    curv:  25%|██▌       | 2/8 [00:00<00:00, 17.18it/s]    curv:  62%|██████▎   | 5/8 [00:00<00:00, 22.18it/s]    curv: 100%|██████████| 8/8 [00:00<00:00, 23.54it/s]    curv: 100%|██████████| 8/8 [00:00<00:00, 22.65it/s]
+    averaged curv:   0%|          | 0/8 [00:00<?, ?it/s]    averaged curv:  38%|███▊      | 3/8 [00:00<00:00, 24.47it/s]    averaged curv:  75%|███████▌  | 6/8 [00:00<00:00, 23.73it/s]    averaged curv: 100%|██████████| 8/8 [00:00<00:00, 24.56it/s]
 
     <Figure size 1500x700 with 12 Axes>
 
@@ -340,8 +340,8 @@ And also do the same plot on the flat mesh:
 
  .. code-block:: none
 
-    curv:   0%|          | 0/2 [00:00<?, ?it/s]    curv:  50%|█████     | 1/2 [00:00<00:00,  7.77it/s]    curv: 100%|██████████| 2/2 [00:00<00:00, 10.36it/s]
-    averaged curv:   0%|          | 0/2 [00:00<?, ?it/s]    averaged curv: 100%|██████████| 2/2 [00:00<00:00, 14.42it/s]    averaged curv: 100%|██████████| 2/2 [00:00<00:00, 14.38it/s]
+    curv:   0%|          | 0/2 [00:00<?, ?it/s]    curv:  50%|█████     | 1/2 [00:00<00:00,  8.99it/s]    curv: 100%|██████████| 2/2 [00:00<00:00, 12.17it/s]
+    averaged curv:   0%|          | 0/2 [00:00<?, ?it/s]    averaged curv: 100%|██████████| 2/2 [00:00<00:00, 18.41it/s]    averaged curv: 100%|██████████| 2/2 [00:00<00:00, 18.35it/s]
 
     <Figure size 1500x700 with 4 Axes>
 
@@ -350,9 +350,9 @@ And also do the same plot on the flat mesh:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 28.450 seconds)
+   **Total running time of the script:** (0 minutes 30.133 seconds)
 
-**Estimated memory usage:**  399 MB
+**Estimated memory usage:**  402 MB
 
 
 .. _sphx_glr_download_auto_examples_plotting_plot_surface.py:

@@ -558,7 +558,7 @@ Let's fit RSA.
                  count      mean       std  ...   count      mean       std
     score                                   ...                            
     ADI_PCA       10.0 -0.001584  0.013910  ...    10.0 -0.010541  0.002227
-    ADOS_PCA      10.0 -0.005162  0.012254  ...    10.0  0.009339  0.002820
+    ADOS_PCA      10.0 -0.005150  0.012265  ...    10.0  0.009301  0.002820
     ADOS_Social   10.0  0.000259  0.013571  ...    10.0  0.007596  0.002528
     ADOS_Total    10.0 -0.002921  0.008585  ...    10.0  0.008774  0.001647
     AgeAtScan     10.0  0.028175  0.010767  ...    10.0  0.052890  0.003441
@@ -911,9 +911,9 @@ Display Kendall tau statistics.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (1 minutes 45.981 seconds)
+   **Total running time of the script:** (1 minutes 22.812 seconds)
 
-**Estimated memory usage:**  5213 MB
+**Estimated memory usage:**  5199 MB
 
 
 .. _sphx_glr_download_auto_examples_latent_plot_rsa.py:

@@ -7,6 +7,6 @@ Versions
 Web-based documentation is available for versions listed below:
 
 
-* `dev documentation <https://neurospin-projects.github.io/cookbook/dev>`_
+* `dev documentation <https://brainprepdesk.github.io/cookbook/dev>`_
 
-* `stable documentation <https://neurospin-projects.github.io/cookbook/stable>`_
+* `stable documentation <https://brainprepdesk.github.io/cookbook/stable>`_
